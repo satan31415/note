@@ -1,0 +1,82 @@
+$color-primary: #409eff;
+$color-success: #67c23a;
+$color-warning: #e6a23c;
+$color-danger: #f56c6c;
+$color-info: #909399;
+
+$color-text-primary: #303133;
+$color-background: #f5f7fa;
+
+.flex {
+  display: flex;
+}
+
+.flex-x-center {
+  @extend .flex;
+  justify-content: center;
+}
+
+.flex-y-center {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex-center {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+.base-shadow {
+  box-shadow: 5px 5px 11px #e8e8e8, -5px -5px 11px #e8e8e8;
+}
+
+.base-radius {
+  border-radius: 4px;
+}
+
+.base-border {
+  border: 1px solid #e8e8e8;
+}
+
+@mixin base-radius($radius: 4px) {
+  border-radius: $radius;
+}
+
+@mixin multi-line-ellipsis($line-height, $lines: 1) {
+  $line-height-value: $line-height;
+  $line-count: $lines;
+
+  display: block;
+  display: -webkit-box;
+  max-height: $line-height-value * $line-count;
+  margin: 0;
+  padding: 0;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}
