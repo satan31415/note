@@ -13,7 +13,7 @@ import SimpleTestHandle from './services/simpleTestHandle.service';
 import StoreHandle from './services/storeHandle.service';
 import { onAppMenu, createAppMenu } from './settings/applicationMenu';
 import createTray from './settings/trayMenu';
-import DownloadFileHandle from './services/DownloadFileHandle.service';
+import DownloadFileHandle from './services/downloadFileHandle.service';
 import ReadFolderHandle from './services/readFolderHandle.service';
 import SimpleDownloadHandle from './services/simpleDownloadHandle.service';
 import ReadBrowserBookmarkHandle from './services/readBrowserBookmarkHandle.service';
