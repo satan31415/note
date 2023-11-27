@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+img,
+input,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+span,
+tr,
+td,
+tbody,
+thead {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+img {
+  border: 0;
+  display: block;
+}
+input,
+textarea,
+select {
+  outline: none;
+  background: none;
+}
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+a {
+  text-decoration: none;
+}
+
+.el-header {
+  @apply p-0 h-[40px];
+}
+.el-main {
+  @apply min-w-[350px] p-0;
+}

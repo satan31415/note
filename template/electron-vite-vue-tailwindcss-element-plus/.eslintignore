@@ -1,0 +1,24 @@
+coverage/*
+# data definition files
+**/*.d.ts
+# 3rd party libs
+/src/public/
+# custom definition files
+/src/types/
+
+node_modules/
+**/*.spec.*
+**/style/
+*.html
+/components/test/*
+es/
+lib/
+_site/
+dist/
+components/version/version.tsx
+pnpm-lock.yaml
+CHANGELOG.en-US.md
+!.*
+docs/components.d.ts
+coverage
+ssr-testing/cases/*

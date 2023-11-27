@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--script-src 指令指定了可以从哪些源加载脚本。其中，‘self’ 表示只允许从同源加载脚本，‘unsafe-inline’ 表示允许在 HTML 中使用内联脚本。这个 CSP 的意思是只允许从同源加载脚本，但是允许在 HTML 中使用内联脚本（也就是允许在 HTML 页面中直接使用 <script> 标签来嵌入 JavaScript 代码）-->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+    <title>&nbsp;</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

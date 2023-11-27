@@ -1,0 +1,95 @@
+{
+  "productName": "MyCustomAppName",
+  "appId": "MyCustomAppId",
+  "directories": {
+    "buildResources": "buildResources",
+    "output": "output/${version}"
+  },
+  "mac": {
+    "artifactName": "${productName}_${version}-${arch}-mac.${ext}",
+    "icon": "buildResources/icon/icon.icns",
+    "darkModeSupport": false,
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
+    ]
+  },
+  "win": {
+    "artifactName": "${productName}_${version}-${arch}-windows.${ext}",
+    "icon": "buildResources/icon/icon.ico",
+    "requestedExecutionLevel": "requireAdministrator",
+    "target": [
+//      {
+//        "target": "nsis",
+//        "arch": [
+//          "x64"
+//        ]
+//      },
+      {
+        "target": "zip",
+        "arch": [
+          "x64"
+        ]
+      }
+    ]
+  },
+  "nsis": {
+    "installerIcon": "buildResources/icon/icon.ico",
+    "shortcutName": "${productName} v${version}",
+    "oneClick": false,
+    "perMachine": false,
+    "runAfterFinish": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": true
+  },
+  "linux": {
+    "artifactName": "${productName}_${version}-${arch}-linux.${ext}",
+    "executableName": "MyCustomAppName",
+    "maintainer": "UPTMR",
+    "synopsis": "在 linux 配置很多地方都没办法用 productName 变量，很奇怪。这是简介，无法从package.json中读取，只能手填1",
+    "description": "这是简介，无法从package.json中读取，只能手填2",
+    "category": "Office;Utility;Development",
+    "packageCategory": "Office;Utility;Development",
+    "mimeTypes": [
+      "text/plain"
+    ],
+    "icon": "buildResources/icon",
+    "desktop": {
+      "Name": "MyCustomAppName",
+      "StartupWMClass": "MyCustomAppName",
+      "Comment": "这是简介，无法从package.json中读取，只能手填3",
+      "Keywords": "MyCustomAppName;关键词1;关键词2;"
+    },
+    "target": [
+      {
+        "target": "deb",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "tar.gz",
+        "arch": [
+          "x64"
+        ]
+      }
+    ]
+  },
+  "files": [
+    {
+      "from": "./",
+      "to": "./",
+      "filter": [
+        "dist",
+        "bin/text-replacer-${platform}*",
+        "mainResources/**/*"
+      ]
+    }
+  ],
+  "asar": true
+}
