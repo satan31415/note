@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="module">
+    import Decimal from './node_modules/decimal.js/decimal.mjs';
+    (0.1 + 0.2) * 5
+    /* 加法 add 或者 plus */
+    console.log(Decimal(0.1).add(0.2).toNumber());
+    /* 减法 sub 或者 minus */
+    console.log(Decimal(0.3).sub(0.1).toNumber());
+    /* 乘法 mul 或者 times */
+    console.log(Decimal(0.1).mul(0.2).toNumber());
+    /* 除法 div 或者 dividedBy */
+    console.log(Decimal(0.3).div(0.1).toNumber());
+    console.log(new Decimal(0.1).add(0.2).times(5).toString())
+    console.log(eval('0.1 + 0.2 * 3 + 0.3 + 0.5 / 5 - 3 + 9 - 3.366 + 0.62 - 3.47'))
+    let result = new Decimal(0.1)
+      .add(new Decimal(0.2).mul(3))
+      .add(0.3)
+      .add(new Decimal(0.5).div(5))
+      .sub(3)
+      .add(9)
+      .sub(3.366)
+      .add(0.62)
+      .sub(3.47);
+
+    console.log(result.toString())
+  </script>
+</head>
+<body>
+
+</body>
+</html>
