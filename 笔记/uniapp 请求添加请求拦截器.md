@@ -1,4 +1,4 @@
-```
+``` javascript
 // 在main.js中设置请求拦截器
 uni.addInterceptor('request', {
   invoke(args) {
