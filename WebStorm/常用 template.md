@@ -1,3 +1,4 @@
+- log
 ```
 console.log(
   '%c heh ---> ',
@@ -6,12 +7,15 @@ console.log(
 )
 ```
 
+- zs
+```
+/* region ====== $DESC$ start */
+/* endregion === $DESC$ end */
+```
+
+- zst
 ```
 <!-- region ====== $DESC$ start -->
 <!-- endregion === $DESC$ end -->
 ```
 
-```
-/* region ====== $DESC$ start */
-/* endregion === $DESC$ end */
-```
