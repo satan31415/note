@@ -1,2 +1,3 @@
 - dayjs (时间处理)
 - z-paging (分页) https://z-paging.zxlee.cn/
+- dom-to-image 根据 dom 节点生成图片
