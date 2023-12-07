@@ -29,6 +29,12 @@ export default [
     component: './Welcome',
   },
   {
+    path: '/demo',
+    name: 'demo',
+    icon: 'smile',
+    component: './demo',
+  },
+  {
     path: '/admin',
     name: 'admin',
     icon: 'crown',
