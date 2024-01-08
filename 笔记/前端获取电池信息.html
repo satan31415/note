@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>前端获取电池信息</title>
+  <script>
+    navigator.getBattery().then(function (battery) {
+      // 后续代码
+      document.body.innerHTML = `
+        <p>电池电量：${battery.level * 100}%</p>
+        <p>电池充电状态：${battery.charging ? '充电中' : '未充电'}</p>
+        <p>电池充电时间：${battery.chargingTime}秒</p>
+        <p>电池放电时间：${battery.dischargingTime}秒</p>
+      `
+      console.log(
+        '%c heh ---> ',
+        'background: #4285f4; font-size: 16px',
+        battery
+      )
+    })
+  </script>
+</head>
+<body>
+
+</body>
+</html>
